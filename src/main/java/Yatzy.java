@@ -76,7 +76,6 @@ public class Yatzy {
     }
 
     public static int largeStraight(int... dices) {
-
         int[] expected = new int[]{2, 3, 4, 5, 6};
         Arrays.sort(dices);
         if (Arrays.equals(dices, expected)) {
@@ -86,7 +85,6 @@ public class Yatzy {
     }
 
     public static int fullHouse(int... dices) {
-
         Map<Integer, Long> values = IntStream.of(dices).boxed()
                 .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
         Long value = values.entrySet().stream().findFirst().get().getValue();
